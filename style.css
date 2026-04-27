@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  background: black;
+  color: white;
+  font-family: Arial;
+  overflow: hidden;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#gate {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: black;
+}
+
+.glitch {
+  font-size: 50px;
+}
+
+button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+#realm {
+  text-align: center;
+  padding-top: 80px;
+}
+
+.throne img {
+  width: 300px;
+  margin-top: 20px;
+  filter: drop-shadow(0 0 40px purple);
+}
