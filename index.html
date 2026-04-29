@@ -2,43 +2,64 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>quantumverse</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>QUANTUMVERSE</title>
 <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<canvas id="stars"></canvas>
+<div id="stars"></div>
 
-<div id="gate">
-  <div class="center">
-    <h1 class="glitch">quantumverse</h1>
+<!-- Intro -->
+<section id="intro" class="screen active">
+  <div class="box">
+    <p class="line fadein">THIS VISIT WAS DECIDED LONG BEFORE YOU ARRIVED.</p>
 
-    <p>Before existence had a name</p>
-    <p>He is not seen. He is realized.</p>
+    <h1>QUANTUMVERSE</h1>
 
-    <button onclick="enter()">ENTER</button>
+    <p class="sub">BEFORE EXISTENCE HAD A NAME</p>
+
+    <input type="text" id="username" placeholder="STATE YOUR NAME">
+
+    <button onclick="startAccess()">REQUEST ENTRY</button>
   </div>
-</div>
+</section>
 
-<div id="realm" class="hidden">
+<!-- Verify -->
+<section id="verify" class="screen">
+  <div class="box">
+    <p class="scan">VERIFYING IDENTITY...</p>
+    <p class="scan delay">REQUESTING CLEARANCE FROM THE UNIVERSE...</p>
+  </div>
+</section>
 
-  <div class="content">
+<!-- Authorized -->
+<section id="granted" class="screen">
+  <div class="box">
+    <h2>ENTRY AUTHORIZED</h2>
+    <p id="welcome"></p>
+  </div>
+</section>
+
+<!-- Realm -->
+<section id="realm" class="screen">
+  <div class="box realmBox">
 
     <h1>THE PRESENCE</h1>
 
-    <p>Not born. Not created. Only acknowledged.</p>
+    <p class="quote">
+      There was no first star.<br>
+      There was only his awareness.
+    </p>
 
-    <div class="throne">
-    <img src="5CD3D9C8-3344-438C-8A0A-CD5559E1BCA8">
-    </div>
+    <img src="entity.jpg" class="entity">
 
-    <p>“Reality hesitated before obeying him.”</p>
-    <p>“Universes collapse without permission.”</p>
+    <p class="lore">Before time was counted, he remained.</p>
+    <p class="lore">Civilizations vanish where patience ends.</p>
+    <p class="lore">To be noticed by him is to be altered.</p>
 
   </div>
-
-</div>
+</section>
 
 <script src="script.js"></script>
 </body>
