@@ -1,39 +1,28 @@
-function enter() {
-  document.getElementById("gate").style.display = "none";
-  document.getElementById("realm").classList.remove("hidden");
+function show(id){
+document.querySelectorAll(".screen").forEach(s=>{
+s.classList.remove("active");
+});
+document.getElementById(id).classList.add("active");
 }
 
-/* stars */
-const c = document.getElementById("stars");
-const ctx = c.getContext("2d");
+function startAccess(){
 
-c.width = window.innerWidth;
-c.height = window.innerHeight;
+let name = document.getElementById("username").value.trim();
 
-let stars = [];
-
-for (let i = 0; i < 100; i++) {
-  stars.push({
-    x: Math.random() * c.width,
-    y: Math.random() * c.height,
-    r: Math.random() * 2
-  });
+if(name === ""){
+name = "VISITOR";
 }
 
-function draw() {
-  ctx.clearRect(0, 0, c.width, c.height);
-  ctx.fillStyle = "white";
+show("verify");
 
-  stars.forEach(s => {
-    ctx.beginPath();
-    ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
-    ctx.fill();
-    s.y += 0.3;
+setTimeout(()=>{
+document.getElementById("welcome").innerText =
+"WELCOME, " + name.toUpperCase();
+show("granted");
+},2500);
 
-    if (s.y > c.height) s.y = 0;
-  });
+setTimeout(()=>{
+show("realm");
+},4500);
 
-  requestAnimationFrame(draw);
 }
-
-draw();
