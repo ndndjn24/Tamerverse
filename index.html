@@ -2,90 +2,65 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>THAMERVERSE</title>
-
-<style>
-body {
-  margin: 0;
-  height: 100vh;
-  background: radial-gradient(circle at center, #0a0a0a, #000000);
-  color: white;
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.container {
-  text-align: center;
-  max-width: 400px;
-  padding: 20px;
-}
-
-.title {
-  font-size: 34px;
-  letter-spacing: 6px;
-  margin-bottom: 30px;
-  text-transform: uppercase;
-}
-
-.subtitle {
-  font-size: 12px;
-  opacity: 0.6;
-  margin-bottom: 20px;
-}
-
-input {
-  width: 100%;
-  padding: 12px;
-  background: transparent;
-  border: 1px solid rgba(255,255,255,0.3);
-  color: white;
-  text-align: center;
-  margin-bottom: 15px;
-  outline: none;
-}
-
-button {
-  width: 100%;
-  padding: 12px;
-  background: white;
-  color: black;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
-
-button:hover {
-  background: #ddd;
-}
-
-.image {
-  margin-top: 25px;
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border: 1px solid rgba(255,255,255,0.2);
-  filter: contrast(1.2) brightness(0.8);
-}
-</style>
-
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>QUANTUMVERSE</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="container">
+<div id="stars"></div>
 
-  <div class="title">THAMERVERSE</div>
-  <div class="subtitle">ACCESS IS NOT REQUESTED — IT IS DECIDED</div>
+<!-- Intro -->
+<section id="intro" class="screen active">
+  <div class="box">
+    <p class="line fadein">THIS VISIT WAS DECIDED LONG BEFORE YOU ARRIVED.</p>
 
-  <input type="text" placeholder="State your name">
-  <button>REQUEST ENTRY</button>
+    <h1>QUANTUMVERSE</h1>
 
-  <img class="image" src="image.jpg">
+    <p class="sub">BEFORE EXISTENCE HAD A NAME</p>
 
-</div>
+    <input type="text" id="username" placeholder="STATE YOUR NAME">
 
+    <button onclick="startAccess()">REQUEST ENTRY</button>
+  </div>
+</section>
+
+<!-- Verify -->
+<section id="verify" class="screen">
+  <div class="box">
+    <p class="scan">VERIFYING IDENTITY...</p>
+    <p class="scan delay">REQUESTING CLEARANCE FROM THE UNIVERSE...</p>
+  </div>
+</section>
+
+<!-- Authorized -->
+<section id="granted" class="screen">
+  <div class="box">
+    <h2>ENTRY AUTHORIZED</h2>
+    <p id="welcome"></p>
+  </div>
+</section>
+
+<!-- Realm -->
+<section id="realm" class="screen">
+  <div class="box realmBox">
+
+    <h1>THE PRESENCE</h1>
+
+    <p class="quote">
+      There was no first star.<br>
+      There was only his awareness.
+    </p>
+
+    <img src="5CD3D9C8-3344-438C-8A0A-CD5559E1BCA8.PNG" class="entity">
+
+    <p class="lore">Before time was counted, he remained.</p>
+    <p class="lore">Civilizations vanish where patience ends.</p>
+    <p class="lore">To be noticed by him is to be altered.</p>
+
+  </div>
+</section>
+
+<script src="script.js"></script>
 </body>
 </html>
